@@ -1,6 +1,7 @@
 export type BlinkLinkResult = {
   actionUrl: string;
   dialToUrl: string;
+  blinkUrl: string;
 };
 
 export function buildSendSolActionUrl(
@@ -29,6 +30,7 @@ export function buildBlinkLinks(
   return {
     actionUrl,
     dialToUrl: buildDialToUrl(actionUrl),
+    blinkUrl: `solana-action:${actionUrl}`
   };
 }
 

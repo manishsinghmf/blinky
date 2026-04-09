@@ -7,6 +7,7 @@ import { buildBlinkLinks } from "@/src/lib/blinks";
 type ResultState = {
   actionUrl: string;
   dialToUrl: string;
+  blinkUrl: string;
 };
 
 function validateRecipientAddress(value: string): string | null {
@@ -202,6 +203,14 @@ export default function HomePage() {
                     rel="noreferrer"
                   >
                     Open in dial.to
+                  </a>
+                  <a
+                    className="secondary-button"
+                    href={result.blinkUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open blink
                   </a>
                 </div>
 
